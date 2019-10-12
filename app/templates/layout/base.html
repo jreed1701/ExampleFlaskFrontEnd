@@ -1,0 +1,68 @@
+{% block header %}
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Bare - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{{ url_for('app.static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('app.static', filename='custom_css/extra.css') }}" rel="stylesheet">
+  
+{% endblock %}
+
+{% block content %}
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">App</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto"> </ul>
+        <a href="/signin" class="btn btn-primary" tabindex="-1" roll="button" aria-disabled="true"> Sign In</a>
+        <a>&nbsp</a>
+        <a href="/signup" class="btn btn-primary" tabindex="-1" roll="button" aria-disabled="true"> Sign Up</a>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+
+        <div class="wrapper">
+            <!-- Sidebar -->
+            <nav id="sidebar">
+                <p></p>
+                <ul class="list-unstyled components">
+                    <li style="background:white" class="btn" data-id="page-1-btn">
+                        <a href="#">Page 1</a>
+                    </li>
+                    <p></p>
+                    <li style="background:white" class="btn" data-id="page-2-btn">
+                        <a href="#">Page 2</a>
+                    </li>
+                </ul>
+            </nav>
+        
+        </div>
+        
+        <div class="starter-template" id="display-area">
+            <h1>Bootstrap starter template</h1>
+            <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+        </div>
+     
+   </main><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="{{ url_for('app.static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('app.static', filename='js/app.js') }}"></script>
+
+</body>
+    
+{% endblock %}

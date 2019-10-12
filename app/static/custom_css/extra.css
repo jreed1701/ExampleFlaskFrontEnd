@@ -5,3 +5,26 @@ body {
   padding: 3rem 1.5rem;
   text-align: center;
 }
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    width: 100px;
+    position: fixed;
+    top: 50;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #212529;
+    color: #fff;
+    padding: 5px 5px 5px 5px;
+    transition: all 0.3s;
+}
+
+#sidebar ul li a {
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+}

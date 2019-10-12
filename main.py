@@ -24,6 +24,7 @@ class MainArgParse(object):
         self._subparser_name = None
         
         self.configuration = ''
+        self.port = 1234
         
         psr = _argparse.ArgumentParser(prog=__file__,
                                        description=_DESCRIPTION_MSG,
@@ -48,6 +49,8 @@ class MainArgParse(object):
         elif self._subparser_name == 'dev':
             print("Launching Development App!")
             self.app = create_app('DEV')
+            
+        self.port = self.app.config['PORT']
             
     def _add_subparser(self, psr):
         
@@ -104,6 +107,6 @@ if __name__ == '__main__':
     
     _arg.apply()
     
-    _arg.app.run()
+    _arg.app.run( port=_arg.port)
     
   
