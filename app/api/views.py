@@ -11,6 +11,16 @@ api = Blueprint('app',
 def main():
     return render_template('index.html')
 
+@api.route('/page1')
+def page1():
+    #print('Page 1 Api Call triggered!')
+    return render_template('api/page1.html')
+
+@api.route('/page2')
+def page2():
+    #print('Page 2 Api Call triggered!')
+    return render_template('api/page2.html')
+
 @api.route('/signin')
 def signin():
     return render_template('signin.html')
