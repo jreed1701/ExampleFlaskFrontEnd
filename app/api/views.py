@@ -9,7 +9,12 @@ api = Blueprint('app',
 
 @api.route('/')
 def main():
-    return render_template('index.html')
+    return render_template('index.html', landingpage=True)
+
+@api.route('/landing')
+def landing():
+    print('Landing content called...')
+    return render_template('layout/landing.html')
 
 @api.route('/page1')
 def page1():
